@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Groups"
+  id="myeclipse.1461736220072"
+  context-root="/Groups"
+  j2ee-spec="6.0"
+  archive="Groups.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

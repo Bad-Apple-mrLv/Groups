@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>BaseController</servlet-name>
+    <servlet-class>com.j1091.controller.BaseController</servlet-class>
+    <init-param>
+      <param-name>actioncfg</param-name>
+      <param-value>ActionConfig.properties</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BaseController</servlet-name>
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>innerServlet</servlet-name>
+    <servlet-class>com.j1091.action.InnerServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>innerServlet</servlet-name>
+    <url-pattern>/initServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
