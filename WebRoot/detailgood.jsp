@@ -97,7 +97,7 @@
 														  var results=eval("("+result+")");
 														  if(results.head=="ok"){
 															alert(results.body);  
-														  }
+														  } 
 													  }
 												  });
 											});

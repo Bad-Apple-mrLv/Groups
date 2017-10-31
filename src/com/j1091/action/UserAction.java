@@ -22,7 +22,7 @@ public class UserAction implements IAction {
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) {
-		return "index.jsp";
+		return "login.jsp";
 	}
 
 	public String login(HttpServletRequest request, HttpServletResponse response) {

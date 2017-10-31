@@ -2,6 +2,7 @@ package com.j1091.dao;
 
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -21,8 +22,8 @@ public class GoodsDao extends BaseC3p0PoolDao {
 				sql = "select count(id) from t_goods where type=" + typeid;
 			}
 			Connection con = super.getConn();
-			Statement st=con.createStatement();
-			ResultSet rs =st.executeQuery(sql);
+			PreparedStatement st=con.prepareStatement(sql);
+			ResultSet rs =st.executeQuery();
 			while(rs.next()){
 				max =rs.getInt(1);
 			}
@@ -35,6 +36,24 @@ public class GoodsDao extends BaseC3p0PoolDao {
 		return max;
 	}
 
+	public int findTuangoucountById(int goodId) {
+		int max = 0;
+		String sql = null;
+		try {
+			sql = "select tuangoucount from t_goods where id=" + goodId;
+			Connection con = super.getConn();
+			PreparedStatement st=con.prepareStatement(sql);
+			ResultSet rs =st.executeQuery();
+			while(rs.next()){
+				max =rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			super.closeConn();
+		}
+		return max;
+	}
 	
 	public Goods findById(int id) {
 		return (Goods)super.findById(id);

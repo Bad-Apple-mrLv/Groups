@@ -10,4 +10,5 @@ public interface IGoodsService {
 	public Goods findById(int id);
 	public int insert(Goods good);
 	public int update(Goods good);
+	public int findTuangoucountById(int goodId);
 }

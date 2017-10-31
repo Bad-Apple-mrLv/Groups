@@ -82,10 +82,10 @@
 						<c:set var="sum" value="0"></c:set>
 						<c:forEach items="${sessionScope.shopcar }" var="shoplan">
 							<tr>
-								<td><img width="60" src="${shoplan.value.goods.goodspic }"
+								<td><img width="60" src="${shoplan.value.good.goodspic }"
 									alt="">
 								</td>
-								<td>${shoplan.value.goods.name}</td>
+								<td>${shoplan.value.good.name}</td>
 								<td>
 									<div class="input-append">
 										<input class="span1" style="max-width:34px" placeholder="${shoplan.value.count}"
@@ -101,10 +101,10 @@
 										</button>
 									</div>
 								</td>
-								<td>$${shoplan.value.goods.price}</td>
-								<td>$${shoplan.value.goods.price*shoplan.value.count}</td>			
+								<td>$${shoplan.value.good.price}</td>
+								<td>$${shoplan.value.good.price*shoplan.value.count}</td>			
 							</tr>
-							<c:set var="sum" value="${sum+shoplan.value.goods.price*shoplan.value.count}"></c:set>
+							<c:set var="sum" value="${sum+shoplan.value.good.price*shoplan.value.count}"></c:set>
 						</c:forEach>
 							<tr>
 								<td colspan="4" style="text-align:right"><strong>总价

@@ -66,8 +66,8 @@
 			<table width="60%">
 			<tr>  
 				<td bgcolor="#F7FEFF" colspan="4">
-			 		订单号：<INPUT TYPE="text" NAME="orderid" value="${order.orderid}"> 
-			 		支付金额：<INPUT TYPE="text" NAME="money" size="6" value="${order.total}">元
+			 		订单号：<INPUT  TYPE="text" readonly="readonly" NAME="orderid" value="${order.orderid}"> 
+			 		支付金额：<INPUT TYPE="text" readonly="readonly" NAME="money" size="6" value="${order.total}">元
 			 	</td>
 			</tr>
 			<tr><td><br/></td></tr>

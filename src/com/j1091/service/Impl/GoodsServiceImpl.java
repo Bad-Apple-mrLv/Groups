@@ -51,4 +51,9 @@ public class GoodsServiceImpl implements IGoodsService {
 		return dao.update(good);
 	}
 
+	@Override
+	public int findTuangoucountById(int goodId) {
+		return dao.findTuangoucountById(goodId);
+	}
+
 }

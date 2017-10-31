@@ -63,7 +63,7 @@
 		<div class="container">
 		
   <c:if test="${ hmac  ne null}">
-		   <!-- 提交给易宝支付 -->
+<!-- 提交给易宝支付 -->
 <form action="https://www.yeepay.com/app-merchant-proxy/node" method="post">
 	<h2>订单号：${p2_Order  } ,金额 ： ${p3_Amt }</h2>
 	<input type="hidden" name="pd_FrpId" value="${pd_FrpId }" />
